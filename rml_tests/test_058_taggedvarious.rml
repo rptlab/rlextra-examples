@@ -7,18 +7,19 @@
 	<registerTTFont faceName="Arial-Bold" fileName="Arial_Bold.ttf"/>
 	<registerTTFont faceName="Arial-Bold-Italic" fileName="Arial_Bold_Italic.ttf"/>
 	<registerTTFont faceName="Arial-Italic" fileName="Arial_Italic.ttf"/>
-	<registerFontFamily normal="Arial" bold="Arial-Bold" italic="Arial-Italic" boldItalic="Arial-Bold-Italic"/>
+	<registerFontFamily normal="Arial" bold="Arial-Bold" italic="Arial-Italic" boldItalic="Arial-Bold-Italic"
+							baseFontFor="both"/>
 	<color id="WCAGRED" RGB="0xEE0000"/>
 </docinit>
 <template pageSize="(595, 842)" leftMargin="72" showBoundary="0" title="Tagged" lang="en-GB" displayDocTitle="1">
 	<pageTemplate id="main">
 		<pageGraphics>
 			<setFont name="Arial-Bold" size="18"/>
-	    	    <drawString x="35" y="783">RML Example 58: Tagged Various - Paragraphs,</drawString>
-	    	    <drawString x="35" y="763">Tables, Lists </drawString>
-	            <setFont name="Arial-Bold-Italic" size="12" />
-	    		<image file="logo_no_bar.png" preserveAspectRatio="1" x="488" y="749" width="72" height="72" required="no" alt_file=""/>
-	    		<image file="strapline.png" preserveAspectRatio="1" x="35" y="0" width="525" alt_file="" required="no"/>
+				<drawString x="35" y="783">RML Example 58: Tagged Various - Paragraphs,</drawString>
+				<drawString x="35" y="763">Tables, Lists </drawString>
+				<setFont name="Arial-Bold-Italic" size="12" />
+				<image file="logo_no_bar.png" preserveAspectRatio="1" x="488" y="749" width="72" height="72" required="no" alt_file=""/>
+				<image file="strapline.png" preserveAspectRatio="1" x="35" y="0" width="525" alt_file="" required="no"/>
 			<setFont name="Arial-Bold-Italic" size="18"/>
 
 			<setFont name="Arial" size="10"/>
@@ -66,7 +67,7 @@
 			space="12"
 			/>
 	</blockTableStyle>
-    <listStyle name="tagged_list" bulletFontSize="10" bulletFontName="Arial"/>
+	<listStyle name="tagged_list" bulletFontSize="10" bulletFontName="Arial"/>
 </stylesheet>
 
 
@@ -90,13 +91,13 @@
 
 	<para style="h1" tagType="H1">Test - Table</para>
 	<para style="normal" tagType="H2">Table 1 Example</para>
-    <blockTable  style="basic" align="LEFT" altText="Table's AltText" summary="Robin's Table Summary Example">
+	<blockTable  style="basic" align="LEFT" altText="Table's AltText" summary="Robin's Table Summary Example">
 				<caption style="h1" tagType="H1">Robin's Table</caption>
-                <tr>
-                    <td tagType="TH scope=column">Col 1</td>
-                    <td tagType="TH scope=column">Col 2</td>
-                    <td tagType="TH scope=column">Col 3</td>
-                </tr>
+				<tr>
+					<td tagType="TH scope=column">Col 1</td>
+					<td tagType="TH scope=column">Col 2</td>
+					<td tagType="TH scope=column">Col 3</td>
+				</tr>
 				<tr><td colspan="2">Row 1, Col 1/2</td><td/><td>Row 1, Col 3</td></tr>
 				<tr><td rowspan="2">Row 2/3, Col 1</td><td>Row 2, Col 2</td><td>Row 2, Col 3</td></tr>
 				<tr><td/><td>Row 3, Col 2</td><td>Row 3, Col 3</td></tr>
@@ -131,14 +132,14 @@
 	</dl>
 <nextPage/>
 	<ul style="tagged_list">
-        <li><para style="normal">Coffee</para></li>
-        <li><para style="normal">Tea</para>
-            <ul style="tagged_list">
-                <li><para style="normal">Black tea</para></li>
-                <li><para style="normal">Green tea</para></li>
-            </ul>
-        </li><li><para style="normal">Milk</para></li>
-    </ul>
+		<li><para style="normal">Coffee</para></li>
+		<li><para style="normal">Tea</para>
+			<ul style="tagged_list">
+				<li><para style="normal">Black tea</para></li>
+				<li><para style="normal">Green tea</para></li>
+			</ul>
+		</li><li><para style="normal">Milk</para></li>
+	</ul>
 
 <nextPage/>
 	<markedContent tagType="Artifact" kind="start"/>
@@ -150,12 +151,12 @@
 	</imageAndFlowables>
 	<markedContent tagType="Artifact" kind="end"/>
 
-    <drawing module="test_014_scatterplot" function="ScatterPlotDrawing" altText="Scatterplot" tagType="Figure">
+	<drawing module="test_014_scatterplot" function="ScatterPlotDrawing" altText="Scatterplot" tagType="Figure">
 		<param name="ScatterPlot.data">[((0.03, 50), (0.07, 54), (0.09, 43)), ((0.03, 27), (0.07, 32), (0.08, 15))]</param>
 		<param name="ScatterPlot.xValueAxis.labels.fontName">Arial</param>
 		<param name="ScatterPlot.yValueAxis.labels.fontName">Arial</param>
 		<param name="ScatterPlot.lineLabels.fontName">Arial</param>
-    </drawing>
+	</drawing>
 	<illustration width="525" height="72">
 		<setFont name="Arial" size="10" leading="12"/>
 		<fill color="WCAGRED"/>
@@ -173,116 +174,131 @@
 			<rect x="10" y="0" width="515" height="10" fill="1" stroke="1" href="https://www.reportlab.com/"/>
 		<markedContent tagType="Artifact" kind="end"/>
 	</illustration>
-	    <blockTable  style="basic" align="LEFT" altText="Test Table Tagging" summary="Split Table Summary Example" repeatRows="1" spaceBefore="10">
-                <tr>
-                    <td tagType="TH scope=column" background="grey">Col 1</td>
-                    <td tagType="TH scope=column" background="grey">Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 1, Col 1</td>
-                    <td>Row 1, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 2, Col 1</td>
-                    <td>Row 2, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 3, Col 1</td>
-                    <td>Row 3, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 4, Col 1</td>
-                    <td>Row 4, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 5, Col 1</td>
-                    <td>Row 5, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 6, Col 1</td>
-                    <td>Row 6, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 7, Col 1</td>
-                    <td>Row 7, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 8, Col 1</td>
-                    <td>Row 8, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 9, Col 1</td>
-                    <td>Row 9, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 10, Col 1</td>
-                    <td>Row 10, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 11, Col 1</td>
-                    <td>Row 11, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 12, Col 1</td>
-                    <td>Row 12, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 13, Col 1</td>
-                    <td>Row 13, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 14, Col 1</td>
-                    <td>Row 14, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 14, Col 1</td>
-                    <td>Row 14, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 15, Col 1</td>
-                    <td>Row 15, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 16, Col 1</td>
-                    <td>Row 16, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 17, Col 1</td>
-                    <td>Row 17, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 19, Col 1</td>
-                    <td>Row 19, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 20, Col 1</td>
-                    <td>Row 20, Col 2</td>
-                </tr>                
-                <tr>
-                    <td>Row 21, Col 1</td>
-                    <td>Row 21, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 22, Col 1</td>
-                    <td>Row 22, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 23, Col 1</td>
-                    <td>Row 23, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 24, Col 1</td>
-                    <td>Row 24, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 25, Col 1</td>
-                    <td>Row 25, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 26, Col 1</td>
-                    <td>Row 26, Col 2</td>
-                </tr>                
+		<blockTable  style="basic" align="LEFT" altText="Test Table Tagging" summary="Split Table Summary Example" repeatRows="1" spaceBefore="10">
+				<tr>
+					<td tagType="TH scope=column" background="grey">Col 1</td>
+					<td tagType="TH scope=column" background="grey">Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 1, Col 1</td>
+					<td>Row 1, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 2, Col 1</td>
+					<td>Row 2, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 3, Col 1</td>
+					<td>Row 3, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 4, Col 1</td>
+					<td>Row 4, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 5, Col 1</td>
+					<td>Row 5, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 6, Col 1</td>
+					<td>Row 6, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 7, Col 1</td>
+					<td>Row 7, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 8, Col 1</td>
+					<td>Row 8, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 9, Col 1</td>
+					<td>Row 9, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 10, Col 1</td>
+					<td>Row 10, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 11, Col 1</td>
+					<td>Row 11, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 12, Col 1</td>
+					<td>Row 12, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 13, Col 1</td>
+					<td>Row 13, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 14, Col 1</td>
+					<td>Row 14, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 14, Col 1</td>
+					<td>Row 14, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 15, Col 1</td>
+					<td>Row 15, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 16, Col 1</td>
+					<td>Row 16, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 17, Col 1</td>
+					<td>Row 17, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 19, Col 1</td>
+					<td>Row 19, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 20, Col 1</td>
+					<td>Row 20, Col 2</td>
+				</tr>				 
+				<tr>
+					<td>Row 21, Col 1</td>
+					<td>Row 21, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 22, Col 1</td>
+					<td>Row 22, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 23, Col 1</td>
+					<td>Row 23, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 24, Col 1</td>
+					<td>Row 24, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 25, Col 1</td>
+					<td>Row 25, Col 2</td>
+				</tr>
+				<tr>
+					<td>Row 26, Col 1</td>
+					<td>Row 26, Col 2</td>
+				</tr>				 
 	</blockTable>
+	<nextPage/>
+	<spacer length="590"/>
+	<ul style="tagged_list" tagType="L">
+		<li tagType="LI"><para style="list-normal">1</para></li>
+		<li tagType="LI"><para style="list-normal">2</para></li>
+		<li tagType="LI"><para style="list-normal">3</para></li>
+		<li tagType="LI"><para style="list-normal">4</para>
+			<para style="list-normal"><b>Lorem Ipsumi</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</para>
+			<para style="list-normal"><i>Another</i> paragraph</para>
+		</li>
+		<li tagType="LI"><para style="list-normal">5</para></li>
+		<li tagType="LI"><para style="list-normal">6</para></li>
+		<li tagType="LI"><para style="list-normal">7</para></li>
+		<li tagType="LI"><para style="list-normal">8</para></li>
+	</ul>
 </story>
 
 </document>
