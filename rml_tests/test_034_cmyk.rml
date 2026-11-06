@@ -3,6 +3,7 @@
 <docinit>
 	<color id="CMYK_WHITE" CMYK="[0,0,0,0]"/>
 	<color id="CMYK_BLACK" CMYK="rgb(0,0,0)"/>
+	<color id="red" CMYK="pcmyk(0,99,100,0)"/>
 	<!-- this will raise an error:   <color id="CMYK_RED" CMYK="rgb(1,0,0)"/> -->
 </docinit>
 
@@ -46,7 +47,7 @@
 	<para style="normal">This is a test of CMYK support.
 	</para>
 	<para style="normal">The four swatches above should be in the CMYK primaries, and the paragraph carefully
-	declares the text color to be process black (k=1).
+	declares the text color to be process black (k=1). <span color="red">This is red!</span>
 	</para>
 	<spacer length="6"/>
 	<para style="normal">This is cmyk white text on cmyk black rectangle</para>
