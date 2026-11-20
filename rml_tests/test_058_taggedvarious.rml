@@ -66,6 +66,7 @@
 			thickness="1"
 			space="12"
 			/>
+			<roundedCorners radii="5,5,5,5"/>
 	</blockTableStyle>
 	<listStyle name="tagged_list" bulletFontSize="10" bulletFontName="Arial"/>
 </stylesheet>
