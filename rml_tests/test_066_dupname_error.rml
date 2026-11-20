@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?> 
+<!DOCTYPE document SYSTEM "rml_1_0.dtd">
+<!--expect:ValueError: attempt to change context['black']==CMYKColor(0,0,0,1,alpha=1) into <ParagraphStyle 'black'>; use a distinct name
+!!!!! tag leading to the problem was
+!!!!! <paraStyle
+!!!!!            fontName='Helvetica'
+!!!!!            fontSize='10'
+!!!!!            leading='12'
+!!!!!            name='black'
+!!!!!            textColor='black'> @ 21:3 - 21:93-->
+<document filename="test_066_dupname_error.pdf">
+	<docinit>
+		<color id="black" CMYK="[0,0,0,1]"/>
+	</docinit>
+    <template pageSize="(595, 842)" leftMargin="72" showBoundary="1">
+        <pageTemplate id="main">
+            <frame id="second" x1="35" y1="45" width="525" height="590"/>
+        </pageTemplate>
+    </template>
+	<stylesheet>
+		<paraStyle name="black" fontName="Helvetica" fontSize="10" leading="12" textColor="black"/>
+    </stylesheet>
+    <story>
+		<para style="black">Should be in style black.</para>
+    </story>
+</document>
